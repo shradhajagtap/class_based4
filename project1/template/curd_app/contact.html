@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+        <div class="border border-info col-6 m-auto mt-3 p-2">
+            <h1 class="text-secondary text-decoration-underline text-center p-3"> Contact Us </h1>
+            <h4 class="text-secondary p-3"> Contact us directly if you have any queries. We will get in touch with you shortly...</h4>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-info mt-2"> Submit </button>
+                <button type="reset" class="btn btn-warning float-end mt-2"> Clear </button>
+            </form>
+        </div>
+</body>
+</html>
